@@ -59,8 +59,20 @@ p {
     font-size: 12px;
 }
 .cont-header {
-    padding: 15px;
+    display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 30px;
+
 }
+
+.top-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+}
+
 .top-header form {
     position: relative;
 }
@@ -95,14 +107,8 @@ p {
     width: 200px;
     
 }
-@keyframes aumentar {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.05);
-    }
-}
+
+
 .copy-header {
     text-align: center;
     padding-top: 30px;
@@ -112,28 +118,32 @@ p {
     font-size: 24px;
 }
 .navbar {
-    display: none;
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
 }
-.cont-burger-menu {
-    text-align: center;
-}
-.burger-menu{
-    display: inline-block;
-    text-align: center;
-    padding: 10px 15px;
-    font-size:24px;
-    color: white;
-    background-color: #1259c3;
-    border-radius: 5px;
-    margin: 10px 10px 20px;
-}
+
 .banner {
     width: 100%; 
     margin-bottom: -5px;
     padding-top: 220px;
 }
-
+.ultima-visita {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.product{
+    width: 24%;
+    transition: 1s;
+}
+.product:hover .nombre {
+    display: block;
+}
+.product:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
 .products{
     background-color: white;
     margin: 10px;
@@ -187,16 +197,18 @@ font-size: 18px;
     right: 20px;
     top: -15px;
 }
+ article i{
+    transition: transform 1s;
+}
+
+article:hover i{
+    transform: rotate(-90deg);
+}
 
 .icon-footer i{
     font-size: 2em;
     color: blue;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-
+    
 }
 
 .icon-footer i:hover {
@@ -257,11 +269,7 @@ footer .icono-footer {
     height: 30px;
     display: inline-block;
     border-style: none;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+   
 }
 button.enviar:hover {
     background-color: #0022AA;
@@ -284,148 +292,5 @@ input[type=password] {
 }
 
 
-/* tablet */
-@media (min-width: 780px) {
 
-.navbar {
-    padding: 10px;
-}
-.top-header .logo {
-    padding: 10px 10px 10px 15px;
-}
-.top-header form {
-    padding: 10px 10px 10px 15px;
-}
-.cont-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 30px;
-}
-.product{
-    width: 40%;
-}
-.ultima-visita {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.ofertas {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.product {
-    display: block;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;    
-}
-.product:hover {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-.info .nombre {
-    padding-top: 10px;
-    display: flex;
-    font-size: 16px;
-}
-
-.nav, .login {
-    display: inline-block;
-}
-.nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    list-style: none;
-}
-.login ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    list-style: none;
-}
-.nav ul li {
-    padding: 0 10px;
-} 
-.login ul li {
-    padding: 0 10px;
-}
-.login ul li i{
-    padding-left: 5px;
-}
-.buscador{
-    width: 500px;
-    padding: 50px;
-}
-
-}
-/*pc*/
-@media (min-width: 1048px) {
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-    } 
-
-    .burger-menu {
-        display: none;
-    }
-
-    .cont-header  {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding-top: 30px;
-    }
-
-    .top-header {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 60%;
-    }
-
-    .logo {
-        width: 30%;
-        display: block;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .product{
-        width: 24%;
-    }
-
-    .product .nombre {
-        opacity: 0;
-        -webkit-transition: all 0.4s ease;
-        -moz-transition: all 0.4s ease;
-        -ms-transition: all 0.4s ease;
-        -o-transition: all 0.4s ease;
-        transition: all 0.4s ease;
-
-    }
-
-    .product:hover .nombre {
-        opacity: 1;
-    }
-
-    footer {
-        flex-direction: row;
-    }
-    footer .icono-footer {
-        margin-bottom: 15px;
-        width: 30%;
-        text-align: center;
-    }
-    .register form {
-        width: 50%;
-    }
-    
-}
 
